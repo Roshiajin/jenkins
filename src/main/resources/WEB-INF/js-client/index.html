@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="UserService.js"></script>
+    <title>Simple JS Client</title>
+</head>
+
+<script type="text/javascript">
+    var userService = new UserService();
+</script>
+
+<body onload="userService.loadUsers();">
+    <h1>Users:</h1>
+    <table id="users_table">
+
+    </table>
+    <hr/>
+    <button onclick="userService.addUser();">Add user</button>
+    <button onclick="userService.removeUser();">Remove user</button>
+</body>
+</html>

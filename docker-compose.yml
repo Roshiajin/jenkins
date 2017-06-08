@@ -1,0 +1,23 @@
+jenkins:
+    image: jenkins
+    ports:
+      - 8888:8080
+      - 50000:50000
+    volumes:
+      - /docker/jenkins:/var/jenkins_home
+
+dev-tomcat:
+    image: tomcat:8.0
+    ports:
+      - 8181:8080
+    volumes:
+      - /docker/tomcat:/usr/local/tomcat
+
+jboss:
+    image: wildfly
+    ports:
+      - 9990:9990
+      - 8080:8080
+      - 8787:8787
+    volumes:
+      - /docker/wildfly:/opt/jboss/wildfly
