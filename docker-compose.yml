@@ -8,6 +8,8 @@ dev-tomcat:
     image: tomcat:8.0
     ports:
       - 8181:8080
+    volumes:
+      - ./docker/tomcat:/usr/local/tomcat
 
 jboss:
     build: .
